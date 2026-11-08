@@ -1,0 +1,23 @@
+{
+  "name": "@gp/server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch --disable-warning=ExperimentalWarning --clear-screen=false src/index.ts",
+    "build": "tsup",
+    "start": "node --disable-warning=ExperimentalWarning dist/index.js",
+    "seed": "tsx --disable-warning=ExperimentalWarning src/seed/seed.ts",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@fastify/static": "^10.1.10",
+    "@gp/shared": "1.0.0",
+    "fastify": "^5.12.8",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "tsup": "^9.0.0",
+    "tsx": "^4.23.15"
+  }
+}
